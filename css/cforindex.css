@@ -1,0 +1,32 @@
+#container {
+	text-align:center;
+}
+
+#top-decoration-div {
+	position:relative;
+	width:600px;
+	height:150px;
+}
+
+.top-decoration {
+	margin:0 auto;
+}
+
+#line-ontop {
+	z-index:-1;
+}
+
+#logo-ontop-div {
+	max-width:200px;
+	position:absolute;
+	top:12px;
+	left:240px;
+}
+
+#logo-ontop {
+	max-width:120px;
+}
+
+p.top-text {
+	font-family:Helvetica;
+}
