@@ -28,5 +28,12 @@
 }
 
 p.top-text {
-	font-family:Helvetica;
+	font-family:Arial;
+}
+
+#mid-container {
+	margin:0 auto;
+	width:960px;
+	height:400px;
+	border:1px solid #000;
 }
