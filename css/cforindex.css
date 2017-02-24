@@ -5,21 +5,17 @@
 #top-decoration-div {
 	position:relative;
 	width:600px;
-	height:150px;
+	height:105px;
 }
 
 .top-decoration {
 	margin:0 auto;
 }
 
-#line-ontop {
-	z-index:-1;
-}
-
 #logo-ontop-div {
 	max-width:200px;
 	position:absolute;
-	top:12px;
+	top:5px;
 	left:240px;
 }
 
@@ -28,7 +24,8 @@
 }
 
 p.top-text {
-	font-family:Arial;
+	font-family:Tahoma;
+	font-size:larger;
 }
 
 #mid-container {
