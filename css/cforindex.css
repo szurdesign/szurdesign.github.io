@@ -8,7 +8,7 @@
 
 #logo-ontop-div {
 	margin:0 auto;
-	padding-top:20px;
+	padding-top:15px;
 	height:75px;
 }
 #logo-ontop {
@@ -21,14 +21,29 @@ p.top-text {
 }
 
 #blank-div {
-	height:10px;
+	height:0px;
 }
 
+div.mid-max-div {
+	width:902px;
+	margin:0 auto;
+	padding=0;
+}
 #mid-container {
 	margin:0 auto;
+	padding:0;
 	width:700px;
 	height:450px;
 	border:1px solid #000;
+	float:left;
+}
+div.arrow-div {
+	float:left; height:450px; 
+	padding:0; margin:0;
+}
+img.arrow {
+	width:100px; height:100px; 
+	padding:0; margin-top:175px;
 }
 
 #mid-text-div {
@@ -54,6 +69,22 @@ p.mid-text {
 	overflow:hidden;
 }
 .mid-pics {
-	width:750px;
-	height:100%;
+	width:700px;
+	height:auto;
+}
+
+div.footer {
+	width:700px;
+	margin:0 auto;
+}
+ul.footer {
+	padding:0;
+	padding-bottom:50px;
+	margin-top:20px;
+}
+ul.footer li {
+	list-style:none;
+	float:left;
+	width:25%;
+	font-size:small;
 }
