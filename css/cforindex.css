@@ -8,6 +8,7 @@
 
 #logo-ontop-div {
 	margin:0 auto;
+	padding-top:20px;
 	height:75px;
 }
 #logo-ontop {
@@ -20,13 +21,13 @@ p.top-text {
 }
 
 #blank-div {
-	height:30px;
+	height:10px;
 }
 
 #mid-container {
 	margin:0 auto;
-	width:600px;
-	height:500px;
+	width:700px;
+	height:450px;
 	border:1px solid #000;
 }
 
@@ -41,15 +42,18 @@ p.top-text {
 p.mid-text {
 	text-align:center;
 	padding:0px;
-	margin-top:25px;
-	margin-bottom:8px;
+	margin-top:12px;
+	margin-bottom:5px;
 	font-size:small;
 	font-family:STXiHei;
 }
 
 #mid-pics-div {
-	width:600px;
+	width:700px;
+	height:390px;
+	overflow:hidden;
 }
 .mid-pics {
-	max-width:600px;
+	width:750px;
+	height:100%;
 }
