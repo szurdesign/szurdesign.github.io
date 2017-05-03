@@ -7,6 +7,10 @@
 	<meta name="keywords" content="urdesign">
 	<!-- Site CSS -->
 	<link rel="stylesheet" type="text/css" href="css/cforindex.css">
+	<!-- Site js -->
+	<script src="http://www1.changyou.com/scripts/jquery.min.js"></script>
+	<script src="js/jquery.cycle.lite.js"></script>
+	<script src="js/jsurdesign.js"></script>
 </head>
 
 <body>
@@ -22,23 +26,33 @@
 
 		<div class="mid-max-div">
 			<div class="arrow-div" id="arrow-left-div">
-				<img class="arrow" id="arrow-left" alt="arrow-left" src="images/arrow-left.jpg" />
+				<img class="arrow" id="arrow-left" alt="arrow-left" src="images/arrow-left.jpg" onclick="prePic()"/>
 			</div>
 			<div class="mid-container" id="mid-container">
 				<div class="mid-text-div" id="mid-text-div">
-					<p class="mid-text">私宅/别墅</p>
+					<p id="mid-text">私宅/别墅</p>
 				</div>
 				<div class="mid-pics-div" id="mid-pics-div">
-					<img class="mid-pics" id="mid-pics-1" alt="私宅" src="images/1.私宅.jpg" />
+                    <img class="mid-pics" id="mid-pic" 
+                        alt="私宅" src="images/1.私宅.jpg" />
 				</div>
 				<div class="mid-icons-div" id="mid-icons-div">
 				</div>
 			</div>
 			<div class="arrow-div" id="arrow-right-div">
-				<img class="arrow" id="arrow-right" alt="arrow-right" src="images/arrow-right.jpg" />
+				<img class="arrow" id="arrow-right" alt="arrow-right" src="images/arrow-right.jpg" onclick="nextPic()"/>
 			</div>
 			<div style="clear:both;"></div>
-		</div>
+		</div/>
+        <!-- picIndex -->
+        <!-- <div class="focusBoxDiv" > -->
+            <ul class="focusBox">
+                <li onclick="showPic(1)"></li>
+                <li onclick="showPic(2)"></li>
+                <li onclick="showPic(3)"></li>
+                <li onclick="showPic(4)"></li>
+            </ul>
+            <!-- </div> -->
 
 		<div class="footer-whole">
 			<div class="footer">
