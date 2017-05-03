@@ -69,5 +69,4 @@ function setCurrentPic() {
     if(sign==5)
         sign=1;
 }
-window.setInterval("setCurrentPic()", 2000);
-
+window.setInterval("setCurrentPic()", 3000);
