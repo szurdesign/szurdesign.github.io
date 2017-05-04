@@ -1,18 +1,5 @@
-/*
- * for jquery try
-//pic change
-$(document).ready(function(){
-	$('#mid-pics-div').cycle({
-		fx:'fade',
-		timeout:5000,
-		pause:0.2,
-		prev:'#arrow-left',
-		next:'#arrow-right',
-	});
-});
-*/
-
 var sign=1;
+var time=null;  //setInterval返回的id
 
 function showPic(index) {
     sign=index;
@@ -22,9 +9,20 @@ function showPic(index) {
     var srcs=["私宅", "商业", "软装", "施工项目"];
     //images/1.私宅.jpg
     picSrc=picSrc + index + "." + srcs[index-1] + ".jpg";
-    //change source
+    //转换过程
     pic.src=picSrc;
     pic.alt=srcs[index-1];
+    var num=0;
+    var step=2;
+    clearInterval(time);    //用途不明
+    time=setInterval(function() {
+        num += step;
+        if(num >= 200) {
+            num=200;
+            clearInterval(time);
+        }
+        pic.style.opacity = num/200;
+    },20);
     document.getElementById("mid-text").innerHTML=srcs[index-1];
     //获取圆点列表
     var lis=document.getElementsByClassName("focusBox")[0]
@@ -36,6 +34,23 @@ function showPic(index) {
 
 window.onload=function() {
     showPic(1);
+}
+
+/*
+ * 定时器
+ */
+function setCurrentPic() {
+    showPic(sign);
+    sign++;
+    if(sign==5)
+        sign=1;
+}
+var autoTime=window.setInterval("setCurrentPic()", 3000);
+function mouseOver() {
+    clearInterval(autoTime);
+}
+function mouseOut() {
+    autoTime=window.setInterval("setCurrentPic()", 3000);
 }
 
 /*
@@ -60,13 +75,3 @@ function prePic() {
     }
 }
 
-/*
- * 定时器
- */
-function setCurrentPic() {
-    showPic(sign);
-    sign++;
-    if(sign==5)
-        sign=1;
-}
-window.setInterval("setCurrentPic()", 3000);
