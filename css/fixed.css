@@ -2,7 +2,6 @@ body {
 	margin:0; padding:0;
 	text-align:center;
     font-size:100%;
-    font-family:STXiHei;
 }
 #container {
 	text-align:center;
@@ -13,34 +12,6 @@ body {
 }
 
 /*
- * nav
- */
-nav {
-    width:100%;
-    height:60px;
-    position:fixed;
-    background-color:rgba(251,251,251,0.8);
-    z-index:80;
-}
-nav canvas {
-    float:left;
-    padding-left:8%;
-    padding-top:6px;
-}
-nav span {
-    float:right;
-    padding-right:8%;
-    padding-top:24px;
-    font-size:0.8rem;
-    /*不换行*/
-    white-space:nowrap;
-}
-a {
-    color:#000;
-    text-decoration:none;
-}
-
-/*
  * top
  */
 .top-decoration {
@@ -48,13 +19,12 @@ a {
 }
 #logo-ontop-div {
 	margin:0 auto;
-	padding-top:10%;
+	padding-top:50px;
 	height:105px;
 	overflow:hidden;
 }
 #logo-ontop {
-    width:20%;
-    max-width:110px;
+	max-width:110px;
 }
 p.top-text {
 	font-family:Tahoma;
@@ -69,39 +39,39 @@ p.top-text {
  * mid-max-div
  */
 div.mid-max-div {
-	width:100%;
+	width:1250px;
 	margin:0 auto;
 	padding=0;
 }
 #mid-container {
 	margin:0 auto;
 	padding:0;
-	width:70%;
+	width:1048px;
+	height:625px;
 /*	border:1px solid #000;	*/
 	float:left;
 }
 div.arrow-div {
-    width:15%;
 	float:left; height:625px; 
 	padding:0; margin:0;
 }
 img.arrow {
-	width:80%; 
-    max-width:100px;
-    height:auto; 
+	width:100px; height:100px; 
 	padding:0; margin-top:262px;
 	opacity:0.5;
 	transition:opacity 1s;
 }
 img.arrow:hover {opacity:0.9;}
 
+#mid-text-div {
+}
 @font-face {
 	font-family:STXiHei;
 	src:url('font/STXiHei.ttf') format('ttf');
 	font-style:normal;
 	font-weight:normal;
 }
-p.mid-text {
+#mid-text {
 	text-align:center;
 	padding:0px;
 	margin-top:12px;
@@ -113,21 +83,23 @@ p.mid-text {
  * 中间图片切换
  */
 #mid-pics-div {
-	width:100%;
+	width:1048px;
+	height:580px;
 	margin:0 auto;
 	padding:0;
 	position:relative;
 	overflow:hidden;
 }
 .mid-pics {
-	width:100%;
-	height:auto;
+	width:auto;
+	height:580px;
 	margin:0 auto;
 	display:block;
 }
 /*
  * focusBox
  */
+div.focusBoxDiv {height:30px;}
 ul.focusBox {
     list-style:none;
     margin:0 auto;
@@ -156,6 +128,7 @@ footer {
 	height:150px;
 /*	background-color:#E0E3DA; */
 	margin-top:100px;
+    clear:both;
 }
 ul.footer {
 	padding:0;
@@ -169,5 +142,3 @@ ul.footer li {
 	width:25%;
 	font-size:0.8em;
 }
-
-.clear {clear:both;}

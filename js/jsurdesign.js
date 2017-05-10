@@ -74,4 +74,3 @@ function prePic() {
         showPic(sign);
     }
 }
-

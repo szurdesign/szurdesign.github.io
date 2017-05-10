@@ -5,18 +5,34 @@
 	<meta charset="utf-8">
 	<meta name="description" content="深圳友仁设计">
 	<meta name="keywords" content="urdesign">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 	<!-- Site CSS -->
 	<link rel="stylesheet" type="text/css" href="css/cforindex.css">
 	<!-- Site js -->
-	<script src="http://www1.changyou.com/scripts/jquery.min.js"></script>
-	<script src="js/jquery.cycle.lite.js"></script>
 	<script src="js/jsurdesign.js"></script>
 </head>
 
 <body>
 	<div class="container" id="container">
+        <nav>
+            <a href="#">
+                <canvas id="myCanvas" width="48px" height="48px">
+            </canvas></a>
+            <script tyep="text/javascript">
+                var c=document.getElementById("myCanvas");
+                var ctx=c.getContext("2d");
+                ctx.moveTo(0,12); ctx.lineTo(48,12); ctx.stroke();
+                ctx.moveTo(0,24); ctx.lineTo(48,24); ctx.stroke();
+                ctx.moveTo(0,36); ctx.lineTo(48,36); ctx.stroke();
+            </script>
+            <span>
+                <a href="#">登录   </a>
+                <a href="#">注册</a>
+            </span>
+            <div class="clear"></div>
+        </nav>
 		<div class="top-decoration" id="logo-ontop-div">
-		<img class="top-decoration" id="logo-ontop" alt="Logo" src="images/logo-black.png" />
+            <img class="top-decoration" id="logo-ontop" alt="Logo" src="images/logo-black.png" />
 		</div>
 		<div class="top-text" id="top-text-div">
 			<p class="top-text">Shenzhen UR Interior Design</p>
@@ -30,41 +46,33 @@
 				<img class="arrow" id="arrow-left" alt="arrow-left" src="images/arrow-left.jpg" onclick="prePic()"/>
 			</div>
 			<div class="mid-container" id="mid-container">
-				<div class="mid-text-div" id="mid-text-div">
-					<p id="mid-text">私宅/别墅</p>
-				</div>
+                <p class="mid-text" id="mid-text">私宅/别墅</p>
 				<div class="mid-pics-div" id="mid-pics-div">
                     <img class="mid-pics" id="mid-pic" 
                         alt="私宅" src="images/1.私宅.jpg" />
-				</div>
-				<div class="mid-icons-div" id="mid-icons-div">
 				</div>
 			</div>
 			<div class="arrow-div" id="arrow-right-div">
 				<img class="arrow" id="arrow-right" alt="arrow-right" src="images/arrow-right.jpg" onclick="nextPic()"/>
 			</div>
-			<div style="clear:both;"></div>
+            <div class="clear"></div>
 		</div/>
         <!-- picIndex -->
-        <!-- <div class="focusBoxDiv" > -->
-            <ul class="focusBox">
-                <li onclick="showPic(1)"></li>
-                <li onclick="showPic(2)"></li>
-                <li onclick="showPic(3)"></li>
-                <li onclick="showPic(4)"></li>
-            </ul>
-            <!-- </div> -->
+        <ul class="focusBox">
+            <li onclick="showPic(1)"></li>
+            <li onclick="showPic(2)"></li>
+            <li onclick="showPic(3)"></li>
+            <li onclick="showPic(4)"></li>
+        </ul>
 
-		<div class="footer-whole">
-			<div class="footer">
-				<ul class="footer">
-					<li>公告</li>
-					<li>团队</li>
-					<li>联络我们</li>
-					<li>分支</li>
-				</ul>
-			</div>
-		</div>
+        <footer class="footer">
+            <ul class="footer">
+                <li>公告</li>
+                <li>团队</li>
+                <li>联络我们</li>
+                <li>分支</li>
+            </ul>
+        </footer>
 	</div> <!-- container -->
 </body>
 </head>
