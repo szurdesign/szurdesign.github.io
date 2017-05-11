@@ -127,6 +127,10 @@ p.mid-text {
 	display:block;
     z-index:-1;
 }
+#loadingPic {
+    width:80px; height:80px;
+    margin:0 auto;
+}
 @media screen and (max-width:650px) {
     #mid-container {width:100%;}
     .arrow-div {position:absolute;}

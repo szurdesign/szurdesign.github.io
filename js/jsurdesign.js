@@ -14,13 +14,11 @@ function showPic(index) {
     document.getElementById("mid-text").innerHTML=srcs[index-1];
     pic.alt=srcs[index-1];
     pic.src=picSrc;
+    var midPicsDiv=document.getElementById("mid-pics-div")
     var picLoadTime=setInterval(function() {
-        var midPicsDiv=document.getElementById("mid-pics-div")
         if(pic.complete) {
             if(document.getElementById("loadingPic")) {
-                //remove loadingPic
-                loadingPic.parentNode.removeChild(loadingPic);
-                midPicsDiv.appendChild("mid-pic");
+                pic.src=picSrc;
             }
             var num=0;
             var step=2;
@@ -38,13 +36,7 @@ function showPic(index) {
         }else { //将loading的小图放上去
             if(document.getElementById("loadingPic")) {
             }else {
-                //清除上一张图片
-                pic.parentNode.removeChild(pic);
-                var loadingPic=new Image;
-                loadingPic.src="images/loading.gif";
-                loadingPic.class="mid-pics";
-                loadingPic.id="loadingPic";
-                midPicsDiv.appendChild(loadingPic);
+                pic.src="images/loading.gif";
             }
         }
     },10);
