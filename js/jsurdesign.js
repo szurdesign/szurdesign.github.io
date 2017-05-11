@@ -20,6 +20,7 @@ function showPic(index) {
             //remove loadingPic
             if(document.getElementById("loadingPic")) {
                 midPicsDiv.removeChild("loadingPic");
+                midPicsDiv.appendChild("mid-pic");
             }
             var num=0;
             var step=2;
@@ -37,6 +38,8 @@ function showPic(index) {
         }else { //将loading的小图放上去
             if(document.getElementById("loadingPic")) {
             }else {
+                //清除上一张图片
+                midPicsDiv.removeChild("mid-pic");
                 var loadingPic=new Image;
                 loadingPic.src="images/loading.gif";
                 loadingPic.class="mid-pics";
