@@ -13,18 +13,19 @@ function showPic(index) {
     //转换过程
     pic.src=picSrc;
     pic.alt=srcs[index-1];
+    document.getElementById("mid-text").innerHTML=srcs[index-1];
     var num=0;
     var step=2;
     clearInterval(time);    //用途不明
     time=setInterval(function() {
         num += step;
-        if(num >= 200) {
-            num=200;
+        if(num >= 150) {
+            num=150;
             clearInterval(time);
         }
-        pic.style.opacity = num/200;
-    },20);
-    document.getElementById("mid-text").innerHTML=srcs[index-1];
+        pic.style.opacity = num/150;
+        document.getElementById("mid-text").style.opacity = num/150;
+    },15);
     //获取圆点列表
     var lis=document.getElementsByClassName("focusBox")[0]
         .getElementsByTagName("li");

@@ -26,7 +26,7 @@
                 ctx.moveTo(0,36); ctx.lineTo(48,36); ctx.stroke();
             </script>
             <span>
-                <a href="#">登录   </a>
+                <a href="#">登录</a>
                 <a href="#">注册</a>
             </span>
             <div class="clear"></div>
@@ -67,12 +67,13 @@
                 var arrowDivList=document.getElementsByClassName("arrow-div");
                 for(var i=0; i<arrowDivList.length; i++) {
                     arrowDivList[i].style.height = picHeight+"px";
-                    arrowDivList[i].style.marginTop = 
+                    //arrowDivList[i].style.marginTop = 
                         document.getElementById("mid-text").style.height + 8 + "px";
                 }
                 var arrowList=document.getElementsByClassName("arrow");
                 for(var i=0; i<arrowList.length; i++) {
-                    arrowList[i].style.marginTop = arrowDivList[i].offsetHeight/3 + "px";
+                    arrowList[i].style.marginTop = 
+                        arrowDivList[i].offsetHeight*9/20 + "px";
                     //alert(arrowList[i].style.marginTop);
                 }
             };
