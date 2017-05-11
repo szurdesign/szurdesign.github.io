@@ -3,29 +3,45 @@ var time=null;  //setInterval返回的id
 
 function showPic(index) {
     sign=index;
-    var pic=document.getElementById("mid-pic");
     //point source
+    var pic=document.getElementById("mid-pic");
     var picSrc="images/";
     var srcs=["私宅", "商业", "软装", "施工项目"];
     //images/1.私宅.jpg
     //picSrc=picSrc + index + "." + srcs[index-1] + ".jpg";
     picSrc=picSrc + index + ".jpg";
     //转换过程
-    pic.src=picSrc;
-    pic.alt=srcs[index-1];
     document.getElementById("mid-text").innerHTML=srcs[index-1];
-    var num=0;
-    var step=2;
-    clearInterval(time);    //用途不明
-    time=setInterval(function() {
-        num += step;
-        if(num >= 150) {
-            num=150;
-            clearInterval(time);
+    pic.alt=srcs[index-1];
+    pic.src=picSrc;
+    var picLoadTime=setInterval(function() {
+        var midPicsDiv=document.getElementById("mid-pics-div")
+        if(pic.complete) {
+            //remove loadingPic
+            if(document.getElementById("loadingPic")) {
+                midPicsDiv.removeChild("loadingPic");
+            }
+            var num=0;
+            var step=2;
+            clearInterval(time);    //用途不明
+            time=setInterval(function() {
+                num += step;
+                if(num >= 150) {
+                    num=150;
+                    clearInterval(time);
+                }
+                pic.style.opacity = num/150;
+                document.getElementById("mid-text").style.opacity = num/150;
+            },15);
+            clearInterval(picLoadTime);
+        }else { //将loading的小图放上去
+                var loadingPic=new Image;
+                loadingPic.src="images/loading.gif";
+                loadingPic.class="mid-pics";
+                loadingPic.id="loadingPic";
+                midPicsDiv.appendChild(loadingPic);
         }
-        pic.style.opacity = num/150;
-        document.getElementById("mid-text").style.opacity = num/150;
-    },15);
+    },10);
     //获取圆点列表
     var lis=document.getElementsByClassName("focusBox")[0]
         .getElementsByTagName("li");
