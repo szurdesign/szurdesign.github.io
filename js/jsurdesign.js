@@ -35,11 +35,14 @@ function showPic(index) {
             },15);
             clearInterval(picLoadTime);
         }else { //将loading的小图放上去
+            if(document.getElementById("loadingPic")) {
+            }else {
                 var loadingPic=new Image;
                 loadingPic.src="images/loading.gif";
                 loadingPic.class="mid-pics";
                 loadingPic.id="loadingPic";
                 midPicsDiv.appendChild(loadingPic);
+            }
         }
     },10);
     //获取圆点列表
