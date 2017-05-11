@@ -8,7 +8,8 @@ function showPic(index) {
     var picSrc="images/";
     var srcs=["私宅", "商业", "软装", "施工项目"];
     //images/1.私宅.jpg
-    picSrc=picSrc + index + "." + srcs[index-1] + ".jpg";
+    //picSrc=picSrc + index + "." + srcs[index-1] + ".jpg";
+    picSrc=picSrc + index + ".jpg";
     //转换过程
     pic.src=picSrc;
     pic.alt=srcs[index-1];
