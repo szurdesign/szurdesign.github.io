@@ -17,9 +17,9 @@ function showPic(index) {
     var picLoadTime=setInterval(function() {
         var midPicsDiv=document.getElementById("mid-pics-div")
         if(pic.complete) {
-            //remove loadingPic
             if(document.getElementById("loadingPic")) {
-                midPicsDiv.removeChild("loadingPic");
+                //remove loadingPic
+                loadingPic.parentNode.removeChild(loadingPic);
                 midPicsDiv.appendChild("mid-pic");
             }
             var num=0;
@@ -39,7 +39,7 @@ function showPic(index) {
             if(document.getElementById("loadingPic")) {
             }else {
                 //清除上一张图片
-                midPicsDiv.removeChild("mid-pic");
+                pic.parentNode.removeChild(pic);
                 var loadingPic=new Image;
                 loadingPic.src="images/loading.gif";
                 loadingPic.class="mid-pics";
