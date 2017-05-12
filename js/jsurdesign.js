@@ -6,19 +6,21 @@ function showPic(index) {
     sign=index;
     //point source
     var pic=document.getElementById("mid-pic");
+    var loadingPic=document.getElementById("loadingPic");
+    var midText=document.getElementById("mid-text");
     var picSrc="images/";
     var srcs=["私宅", "商业", "软装", "施工项目"];
     //images/1.私宅.jpg
     //picSrc=picSrc + index + "." + srcs[index-1] + ".jpg";
     picSrc=picSrc + index + ".jpg";
     //转换过程
-    document.getElementById("mid-text").innerHTML=srcs[index-1];
+    midText.innerHTML=srcs[index-1];
     pic.alt=srcs[index-1];
     pic.src=picSrc;
-    var midPicsDiv=document.getElementById("mid-pics-div")
+    var midPicsDiv=document.getElementById("mid-pics-div");
     var picLoadTime=setInterval(function() {
         if(pic.complete) {
-            document.getElementById("loadingPic").style.display="none";
+            loadingPic.style.display="none";
             pic.style.display="block";
             var num=0;
             var step=2;
@@ -30,13 +32,13 @@ function showPic(index) {
                     clearInterval(time);
                 }
                 pic.style.opacity = num/150;
-                document.getElementById("mid-text").style.opacity = num/150;
+                midText.style.opacity = num/150;
             },15);
             clearInterval(picLoadTime);
         }else { //将loading的小图放上去
             clearInterval(autoTime);
             pic.style.display="none";
-            document.getElementById("loadingPic").style.display="block";
+            loadingPic.style.display="block";
         }
     },10);
     //获取圆点列表
