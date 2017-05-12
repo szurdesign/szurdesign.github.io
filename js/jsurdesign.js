@@ -17,8 +17,9 @@ function showPic(index) {
     var midPicsDiv=document.getElementById("mid-pics-div")
     var picLoadTime=setInterval(function() {
         if(pic.complete) {
-            if(document.getElementById("loadingPic")) {
+            if(pic.src == "images/loading.gif") {
                 pic.src=picSrc;
+                pic.className="mid-pics";
             }
             var num=0;
             var step=2;
@@ -34,9 +35,10 @@ function showPic(index) {
             },15);
             clearInterval(picLoadTime);
         }else { //将loading的小图放上去
-            if(document.getElementById("loadingPic")) {
+            if(pic.src == "images/loading.gif") {
             }else {
                 pic.src="images/loading.gif";
+                pic.className="loadingPic";
             }
         }
     },10);
