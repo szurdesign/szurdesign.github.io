@@ -40,14 +40,14 @@
 		</div>
         <div class="blank-div"></div>
 
-        <div class="mid-max-div" id="mid-max-div"
-            onmouseover="mouseOver()" onmouseout="mouseOut()">
+        <div class="mid-max-div" id="mid-max-div">
 			<div class="arrow-div" id="arrow-left-div">
 				<img class="arrow" id="arrow-left" alt="arrow-left" src="images/arrow-left.jpg" onclick="prePic()"/>
 			</div>
 			<div class="mid-container" id="mid-container">
                 <p class="mid-text" id="mid-text">私宅/别墅</p>
-				<div class="mid-pics-div" id="mid-pics-div">
+                <div class="mid-pics-div" id="mid-pics-div"
+                    onmouseover="mouseOver()" onmouseout="mouseOut()">
                     <!-- <img class="mid-pics" id="mid-pic" 
                         alt="私宅" src="images/1.私宅.jpg" /> -->
                     <img class="mid-pics" id="mid-pic" 
@@ -62,25 +62,6 @@
 			</div>
             <div class="clear"></div>
 		</div/>
-        <!-- adjust arrows' height -->
-        <script type="text/javascript">
-            var pic=document.getElementById("mid-pic");
-            pic.onload = function() {
-                var picHeight=pic.height;
-                var arrowDivList=document.getElementsByClassName("arrow-div");
-                for(var i=0; i<arrowDivList.length; i++) {
-                    arrowDivList[i].style.height = picHeight+"px";
-                    //arrowDivList[i].style.marginTop = 
-                        document.getElementById("mid-text").style.height + 8 + "px";
-                }
-                var arrowList=document.getElementsByClassName("arrow");
-                for(var i=0; i<arrowList.length; i++) {
-                    arrowList[i].style.marginTop = 
-                        arrowDivList[i].offsetHeight*9/20 + "px";
-                    //alert(arrowList[i].style.marginTop);
-                }
-            };
-        </script>
         <!-- picIndex -->
         <ul class="focusBox">
             <li onclick="showPic(1)"></li>
