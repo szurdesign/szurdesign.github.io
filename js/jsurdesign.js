@@ -37,6 +37,8 @@ function showPic(index) {
 
                 loadDivFlag=false;
                 }
+                //loadingPic定位
+                loadingPic.style.marginTop=midPicsDiv.offsetHeight*2/5+"px";
                 //重新开始自动轮播
                 if(!autoTime)
                     autoTime=window.setInterval("setCurrentPic()", 3000);
