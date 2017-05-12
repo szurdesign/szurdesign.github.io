@@ -18,7 +18,7 @@ function showPic(index) {
     var picLoadTime=setInterval(function() {
         if(pic.complete) {
             if(document.getElementById("loadingPic")) {
-                loadingPic.parent.removeChild(loadingPic);
+                midPicsDivremoveChild(loadingPic);
                 midPicsDiv.appendChild(pic);
             }
             var num=0;
@@ -37,7 +37,7 @@ function showPic(index) {
         }else { //将loading的小图放上去
             if(document.getElementById("loadingPic")) {
             }else {
-                pic.parent.removeChild(pic);
+                midPicsDiv.removeChild(pic);
                 var loadingPic = new Image;
                 loadingPic.src="images/loading.gif";
                 loadingPic.id="loadingPic";
