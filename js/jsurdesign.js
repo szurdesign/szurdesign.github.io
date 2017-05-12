@@ -1,5 +1,6 @@
 var sign=1;
 var time=null;  //setInterval返回的id
+var autoTime=null;
 
 function showPic(index) {
     sign=index;
@@ -33,6 +34,7 @@ function showPic(index) {
             },15);
             clearInterval(picLoadTime);
         }else { //将loading的小图放上去
+            clearInterval(autoTime);
             pic.style.display="none";
             document.getElementById("loadingPic").style.display="block";
         }
@@ -45,10 +47,6 @@ function showPic(index) {
     lis[index-1].className="cur";
 }
 
-window.onload=function() {
-    showPic(1);
-}
-
 /*
  * 定时器
  */
@@ -58,7 +56,11 @@ function setCurrentPic() {
     if(sign==5)
         sign=1;
 }
-var autoTime=window.setInterval("setCurrentPic()", 3000);
+window.onload=function() {
+    showPic(1);
+    autoTime=window.setInterval("setCurrentPic()", 3000);
+}
+
 function mouseOver() {
     clearInterval(autoTime);
 }
