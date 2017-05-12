@@ -18,7 +18,7 @@ function showPic(index) {
     var picLoadTime=setInterval(function() {
         if(pic.complete) {
             if(document.getElementById("loadingPic")) {
-                midPicsDivremoveChild(loadingPic);
+                midPicsDiv.removeChild(loadingPic);
                 midPicsDiv.appendChild(pic);
             }
             var num=0;
