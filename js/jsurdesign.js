@@ -17,10 +17,8 @@ function showPic(index) {
     var midPicsDiv=document.getElementById("mid-pics-div")
     var picLoadTime=setInterval(function() {
         if(pic.complete) {
-            if(document.getElementById("loadingPic")) {
-                midPicsDiv.removeChild(midPicsDiv[0]);
-                midPicsDiv.appendChild(pic);
-            }
+            document.getElementById("loadingPic").style.display="none";
+            pic.style.display="block";
             var num=0;
             var step=2;
             clearInterval(time);    //用途不明
@@ -35,15 +33,8 @@ function showPic(index) {
             },15);
             clearInterval(picLoadTime);
         }else { //将loading的小图放上去
-            if(document.getElementById("loadingPic")) {
-            }else {
-                midPicsDiv.removeChild(midPicsDiv[0]);
-                var loadingPic = new Image;
-                loadingPic.src="images/loading.gif";
-                loadingPic.id="loadingPic";
-                loadingPic.className="loadingPic";
-                midPicsDiv.appendChild(loadingPic);
-            }
+            pic.style.display="none";
+            document.getElementById("loadingPic").style.display="block";
         }
     },10);
     //获取圆点列表
