@@ -1,0 +1,48 @@
+form {
+    width:60%;
+    margin-left:20%;
+    text-align:left;
+}
+
+/* words in form */
+form h1 {
+    font-size:1.5em;
+}
+form p {
+    margin-top:7px;
+    margin-bottom:7px;
+}
+p.title {
+    font-weight:bold;
+    font-size:1.1em;
+}
+p.des {
+    color:grey;
+    font-size:0.9;
+    width:220px;
+    word-break:keep-all;
+}
+
+/* btn in form */
+div.btn-div {
+    width:100%;
+    text-align:right;
+    white-space:nowrap;
+}
+div.btn-div span {
+    font-size:1.0em;
+    white-space:pre;
+    color:grey;
+}
+div.btn-div input {
+    background-color:transparent;
+    font-family:STXiHei,Tahoma;
+    cursor:pointer;
+    border:none;
+}
+#btnSubmit {
+    font-size:1.3em;
+}
+#btnReset {
+    font-size:1.1em;
+}

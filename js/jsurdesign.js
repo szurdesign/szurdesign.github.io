@@ -40,7 +40,7 @@ function showPic(index) {
                 //loadingPic定位
                 loadingPic.style.marginTop=midPicsDiv.offsetHeight*2/5+"px";
                 //重新开始自动轮播
-                if(!autoTime)
+                if(autoTime == null)
                     autoTime=window.setInterval("setCurrentPic()", 3000);
             }
             //将加载图换下

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Us-UrDesign</title>
+	<!-- Site CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/cIndex.css">
+	<link rel="stylesheet" type="text/css" href="../css/cSignUp.css">
+</head>
+<body>
+    <nav>
+        <a href="#">
+        <canvas id="myCanvas" width="48px" height="48px">
+        </canvas></a>
+        <script tyep="text/javascript">
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+            ctx.moveTo(0,12); ctx.lineTo(48,12); ctx.stroke();
+            ctx.moveTo(0,24); ctx.lineTo(48,24); ctx.stroke();
+            ctx.moveTo(0,36); ctx.lineTo(48,36); ctx.stroke();
+        </script>
+        <span>
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+        </span>
+        <div class="clear"></div>
+    </nav>
+    <div class="blank-div"></div>
+    <div class="top-decoration" id="logo-ontop-div">
+        <a href="../index.html">
+            <img class="top-decoration" id="logo-ontop" alt="Logo" src="../images/logo-black.png" />
+        </a>
+    </div>
+    <div class="top-text" id="top-text-div">
+        <p class="top-text">Shenzhen UR Interior Design</p>
+    </div>
+    <div class="blank-div"></div>
+
+    <form>
+        <h1>Sign up & Keep in touch with us</h1><br />
+        <p class="title">Username</p>
+        <input id="username" type="text" size=30 required 
+        pattern="^\w{3,12}$" 
+        oninvalid="setCustomValidity('输入不合法')" /><br/>
+        <p class="des">Recommended in real name.</p>
+        <br/>
+        <p class="title">Email Address</p>
+        <input id="emailAddress" type="email" size=30 required 
+        oninvalid="setCustomValidity('请输入正确的email地址')"/><br/>
+        <p class="des">
+            You will receive email occasionally, and discard easily it if you dislike.
+        </p>
+        <br/>
+        <p class="title">Password</p>
+        <input id="password" type="password" size=30 required 
+        pattern="\w{6,15}" 
+        oninvalid="setCustomValidity('6-15位数字、字母和下划线')"/><br/>
+        <p class="des">
+            At least 6 characters, only alphanumeric characters or single hyphens.
+        </p>
+        <br/>
+        <p class="title">Phone Number</p>
+        <input id="phoneNumber" type="text" size=30 required 
+        pattern="^\d{11}$" 
+        oninvalid="setCustomValidity('请输入正确的手机号码')"/><br/>
+        <p class="des">Keep contact</p>
+        <br/>
+        <br /><br /><br /><br />
+        <div class="btn-div">
+            <input id="btnSubmit" type="submit" value="Sign up" />
+            <span>  or  </span>
+            <input id="btnReset" type="reset" value="think about it" />
+        </div>
+    </form>
+    <div class="blank-div"></div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <ul class="footer">
+            <li>公告</li>
+            <li>团队</li>
+            <li>联络我们</li>
+            <li>分支</li>
+        </ul>
+    </footer>
+</body>
+</html>
