@@ -1,0 +1,21 @@
+/*
+ * exhibition
+ */
+
+div.content {
+    width:100%;
+}
+
+aside {
+    position:fixed;
+    width:10%;
+    height:20%;
+    border:1px solid #000;
+}
+div.exhibition {
+    width:50%;
+    height:30%;
+    margin-left:20%;
+    border:1px solid #000;
+}
+
