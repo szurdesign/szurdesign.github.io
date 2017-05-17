@@ -22,6 +22,11 @@ p.des {
     width:220px;
     word-break:keep-all;
 }
+/* input in form */
+form input {
+    width:30%;
+    min-width:180px;
+}
 
 /* btn in form */
 div.btn-div {
