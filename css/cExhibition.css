@@ -27,3 +27,11 @@ img.pic {
 }
 h1 {font-size:1.2em;}
 p {font-size:1.0em;}
+
+@media screen and (max-width:650px) {
+    div.content {
+        width:90%; 
+        padding-left:5%;
+        padding-right:5%;
+    }
+}
