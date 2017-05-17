@@ -3,7 +3,7 @@
  */
 
 div.content {
-    width:70%;
+    width:60%;
     margin:0 auto;
 }
 /*
@@ -23,7 +23,7 @@ aside {
     border-top:1px solid #000;
 }
 img.pic {
-    width:90%;
+    width:100%;
 }
 h1 {font-size:1.2em;}
 p {font-size:1.0em;}
