@@ -3,19 +3,27 @@
  */
 
 div.content {
-    width:100%;
+    width:70%;
+    margin:0 auto;
 }
-
+/*
 aside {
-    position:fixed;
-    width:10%;
+    width:20%;
     height:20%;
+    position:fixed;
+    right:10%;
     border:1px solid #000;
 }
-div.exhibition {
-    width:50%;
-    height:30%;
-    margin-left:20%;
-    border:1px solid #000;
+*/
+.exhibition {
+    width:100%;
+    text-align:left;
+    padding-top:5%;
+    padding-bottom:5%;
+    border-top:1px solid #000;
 }
-
+img.pic {
+    width:90%;
+}
+h1 {font-size:1.2em;}
+p {font-size:1.0em;}
