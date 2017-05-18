@@ -43,7 +43,9 @@
 
     <div class="mid-max-div" id="mid-max-div">
         <div class="arrow-div" id="arrow-left-div">
-            <img class="arrow" id="arrow-left" alt="arrow-left" src="images/arrow-left.jpg" onclick="prePic()"/>
+            <img class="arrow" id="arrow-left" alt="arrow-left" 
+            src="images/arrow-left.jpg" onclick="prePic()" 
+            onmouseover="mouseOver()" onmouseout="mouseOut()" />
         </div>
         <div class="mid-container" id="mid-container">
             <p class="mid-text" id="mid-text">私宅/别墅</p>
@@ -61,7 +63,9 @@
             </div>
         </div>
         <div class="arrow-div" id="arrow-right-div">
-            <img class="arrow" id="arrow-right" alt="arrow-right" src="images/arrow-right.jpg" onclick="nextPic()"/>
+            <img class="arrow" id="arrow-right" alt="arrow-right" 
+            src="images/arrow-right.jpg" onclick="nextPic()"
+            onmouseover="mouseOver()" onmouseout="mouseOut()" />
         </div>
         <div class="clear"></div>
     </div/>
@@ -77,10 +81,10 @@
 
     <footer class="footer">
         <ul class="footer">
-            <li>公告</li>
-            <li>团队</li>
-            <li>联络我们</li>
-            <li>分支</li>
+            <li><a href="views/announcement.html">公告</a></li>
+            <li><a href="views/team.html">团队</a></li>
+            <li><a href="views/contactUs.html">联络我们</a></li>
+            <li><a href="views/branch.html">分支</a></li>
         </ul>
     </footer>
 </body>

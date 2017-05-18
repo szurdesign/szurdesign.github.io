@@ -1,0 +1,26 @@
+/* 
+ * announcement
+ */
+
+div.content {
+    width:60%;
+    margin:0 auto;
+}
+.announcement {
+    width:100%;
+    text-align:left;
+    padding-top:5%;
+    padding-bottom:5%;
+    border-top:1px solid #000;
+}
+h1 {font-size:1.2em;}
+div.announcement p {
+    color:grey;
+    font-size:1.0em;
+    width:80%;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+}

@@ -1,0 +1,12 @@
+/*
+ * contact us
+ */
+
+div.content {
+    width:60%;
+    margin:0 auto;
+    text-align:left;
+}
+div.content h1 {font-size:1.5em;}
+div.content h2 {font-size:1.2em;}
+div.content p {font-size:1.0em;}

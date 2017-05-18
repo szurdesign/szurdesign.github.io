@@ -1,0 +1,25 @@
+/*
+ * team
+ */
+
+div.content {
+    width:70%;
+    margin:0 auto;
+    text-align:left;
+}
+div.des-div {
+    width:100%;
+}
+div.des-div h1 {font-size:1.5em;}
+div.des-div p {
+    font-size:1.0em;   
+    width:70%;
+}
+div.pic-div {
+    width:100%;
+}
+div.pic-div img {
+    width:70%;
+    float:right;
+    cursor:pointer;
+}
