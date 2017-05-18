@@ -40,8 +40,7 @@ function showPic(index) {
                 //loadingPic定位
                 loadingPic.style.marginTop=midPicsDiv.offsetHeight*2/5+"px";
                 //重新开始自动轮播
-                if(autoTime == null)
-                    autoTime=window.setInterval("setCurrentPic()", 3000);
+                autoTime=window.setInterval("setCurrentPic()", 3000);
             }
             //将加载图换下
             loadingPic.style.display="none";
@@ -86,7 +85,6 @@ function setCurrentPic() {
     if(sign==5)
         sign=1;
 }
-autoTime=window.setInterval("setCurrentPic()", 3000);
 window.onload = function() {
     showPic(1);
 }
