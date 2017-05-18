@@ -23,7 +23,7 @@ p.des {
     word-break:keep-all;
 }
 /* input in form */
-form input {
+div.sheet-div input {
     width:30%;
     min-width:180px;
 }
@@ -50,4 +50,11 @@ div.btn-div input {
 }
 #btnReset {
     font-size:1.1em;
+}
+
+@media screen and (max-width:600px) {
+form {
+    width:60%;
+    margin:0 auto;
+}
 }
