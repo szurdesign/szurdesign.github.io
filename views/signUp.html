@@ -37,27 +37,27 @@
     </div>
     <div class="blank-div"></div>
 
-    <form>
+    <form action="../php/signUp.php" method="post">
         <div class="sheet-div">
             <h1>Sign up & Keep in touch with us</h1>
             <span>Already have an account? Click </span>
             <a href="signIn.html"><strong>here</strong></a>
             <span> to sign in.</span><br/><br/><br/> 
             <p class="title">Username</p>
-            <input id="username" type="text" required 
+            <input id="username" name="username" type="text" required 
             pattern="^\w{3,12}$" 
             oninvalid="setCustomValidity('输入不合法')" /><br/>
             <p class="des">Recommended in real name.</p>
             <br/>
             <p class="title">Email Address</p>
-            <input id="emailAddress" type="email" required 
+            <input id="emailAddress" name="email" type="email" required 
             oninvalid="setCustomValidity('请输入正确的email地址')"/><br/>
             <p class="des">
                 You will receive email occasionally, and discard easily it if you dislike.
             </p>
             <br/>
             <p class="title">Password</p>
-            <input id="password" type="password" required 
+            <input id="password" name="password" type="password" required 
             pattern="\w{6,15}" 
             oninvalid="setCustomValidity('6-15位数字、字母和下划线')"/><br/>
             <p class="des">
@@ -65,7 +65,7 @@
             </p>
             <br/>
             <p class="title">Phone Number</p>
-            <input id="phoneNumber" type="text" required 
+            <input id="phoneNumber" name="phoneNumber" type="text" required 
             pattern="^\d{11}$" 
             oninvalid="setCustomValidity('请输入正确的手机号码')"/><br/>
             <p class="des">Keep contact</p>
@@ -73,7 +73,7 @@
         <br/>
         <br /><br /><br /><br />
         <div class="btn-div">
-            <input id="btnSubmit" type="submit" value="Sign up" />
+            <input id="btnSubmit" name="submit" type="submit" value="Sign up" />
             <span>  or  </span>
             <input id="btnReset" type="reset" value="think about it" />
         </div>
