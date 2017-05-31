@@ -85,6 +85,10 @@ function setCurrentPic() {
     if(sign==5)
         sign=1;
 }
+
+/*
+ * window onload function
+ */
 window.onload = function() {
     showPic(1);
 }
@@ -124,4 +128,11 @@ function prePic() {
         sign--;
         showPic(sign);
     }
+}
+
+/*
+ * 弹出窗控制
+ */
+function close() {
+    document.getElementById("cancel");
 }
