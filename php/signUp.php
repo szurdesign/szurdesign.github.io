@@ -7,13 +7,14 @@ if(isset($_POST["submit"]) && $_POST["submit"]=="Sign up") {
     $phoneNumber=$_POST["phoneNumber"];
 
     // database
-    $con=mysql_connect("localhost","bran","liaomelo15@","szurdesign");
-    if(mysql_connect_errno($con)) {
+    $con=mysql_connect("localhost","bran","liaomelo15@");
+    mysql_select_db("szurdesign");
+    if(mysqli_connect_errno($con)) {
         // check connection
-        echo "Fail to connect to MySQL Database";
+        echo "<script>alert('Fail to connect to MySQL Database')</script>";
     }
-    $checkSql="select username from userInfo where username='$username' or email='$email';";
-    $result=mysql_query($checkSql);
+    $checkSql="SELECT username FROM userInfo WHERE username='".$username."'" ;
+    $result=mysql_query($checkSql) or die(mysql_error());
     $num=mysql_num_rows($result);
     if($num) {
         // 已存在用户名

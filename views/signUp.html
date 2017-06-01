@@ -58,7 +58,7 @@
             <br/>
             <p class="title">Password</p>
             <input id="password" name="password" type="password" required 
-            pattern="\w{6,15}" 
+            pattern="^\w{6,15}$" 
             oninvalid="setCustomValidity('6-15位数字、字母和下划线')"/><br/>
             <p class="des">
                 At least 6 characters, only alphanumeric characters or single hyphens.
