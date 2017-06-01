@@ -13,7 +13,7 @@ if(isset($_POST["submit"]) && $_POST["submit"]=="Sign up") {
         // check connection
         echo "<script>alert('Fail to connect to MySQL Database')</script>";
     }
-    $checkSql="SELECT username FROM userInfo WHERE username='".$username."'" ;
+    $checkSql="SELECT username FROM userInfo WHERE username=binary'".$username."'";
     $result=mysql_query($checkSql) or die(mysql_error());
     $num=mysql_num_rows($result);
     if($num) {
@@ -25,12 +25,15 @@ if(isset($_POST["submit"]) && $_POST["submit"]=="Sign up") {
            values('$username','$password','$email','$phoneNumber');";
         $res_insert=mysql_query($sql_insert);
         if($res_insert) {
-            echo "<script>alert('注册成功！')</script>";
+            echo "<script>alert('注册成功！');location.href='http://www.szurdesign.com';</script>";
+            exit();
         }else {
             echo "<script>alert('注册失败！')</script>";
+            die(mysql_error());
         }
+
     }
 }else {
-    echo "注册失败！";
+    echo "跳转失败！";
 }
 ?>

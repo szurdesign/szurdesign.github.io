@@ -15,7 +15,8 @@ if(isset($_POST["submit"]) && $_POST["submit"]=="Sign in") {
     $result=mysql_query($sql) or die(mysql_error());
     $num=mysql_num_rows($result);
     if($num && $num==1) {
-        echo "<script>alert('登录成功！')</script>";
+        echo "<script>alert('登录成功！');location.href='http://www.szurdesign.com';</script>";
+        exit();
     }else {
         echo "<script>alert('登录失败！')</script>";
     }
