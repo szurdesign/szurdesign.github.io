@@ -27,6 +27,20 @@
         <span>
             <a href="views/signIn.html">登录</a>
             <a href="views/signUp.html">注册</a>
+            <?php
+            if(isset($_SESSION) {
+                // 已登录
+                echo '
+                    $_SESSION["username"];
+                ';
+            }else {
+                // 未登录
+                echo '
+                    <a href="views/signIn.html">登录</a>
+                    <a href="views/signUp.html">注册</a>
+                ';
+            }
+            ?>
         </span>
         <div class="clear"></div>
     </nav>

@@ -17,11 +17,7 @@ if(isset($_POST["submit"]) && $_POST["submit"]=="Sign in") {
     if($num && $num==1) {
         // session starts
         session_start();
-        if(isset($_SESSION)) {
-            echo $_SESSION;
-        }else {
-            echo "no session started";
-        }
+        $_SESSION["username"]=mysql_query("select username from userInfo where phoneNumber='$phoneNumber'") or die("get username sql error");
         echo "<script>alert('登录成功！');location.href='http://www.szurdesign.com';</script>";
         exit();
     }else {
