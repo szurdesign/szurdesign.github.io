@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Join Us | UrDesign</title>
+    <title>Join Us&nbsp&nbsp|&nbsp&nbspUrDesign</title>
 	<!-- Site CSS -->
 	<link rel="stylesheet" type="text/css" href="../css/cIndex.css">
 	<link rel="stylesheet" type="text/css" href="../css/cSignUp.css">
@@ -43,32 +43,36 @@
             <span>Already have an account? Click </span>
             <a href="signIn.html"><strong>here</strong></a>
             <span> to sign in.</span><br/><br/><br/> 
-            <p class="title">Username</p>
-            <input id="username" name="username" type="text" required 
-            pattern="^\w{3,12}$" 
-            oninvalid="setCustomValidity('输入不合法')" /><br/>
-            <p class="des">Recommended in real name.</p>
-            <br/>
-            <p class="title">Email Address</p>
-            <input id="emailAddress" name="email" type="email" required 
-            oninvalid="setCustomValidity('请输入正确的email地址')"/><br/>
-            <p class="des">
-                You will receive email occasionally, and discard easily it if you dislike.
-            </p>
-            <br/>
-            <p class="title">Password</p>
-            <input id="password" name="password" type="password" required 
-            pattern="^\w{6,15}$" 
-            oninvalid="setCustomValidity('6-15位数字、字母和下划线')"/><br/>
-            <p class="des">
-                At least 6 characters, only alphanumeric characters or single hyphens.
-            </p>
-            <br/>
             <p class="title">Phone Number</p>
             <input id="phoneNumber" name="phoneNumber" type="text" required 
             pattern="^\d{11}$" 
             oninvalid="setCustomValidity('请输入正确的手机号码')"/><br/>
-            <p class="des">Keep contact</p>
+            <p class="des">
+                用于登录标识
+            </p>
+            <br />
+            <p class="title">Username</p>
+            <input id="username" name="username" type="text" required 
+            pattern="^\w{3,12}$" 
+            oninvalid="setCustomValidity('输入不合法')" /><br/>
+            <p class="des">
+                长度在3-12之间，只允许含有数字、字母或下划线
+            </p>
+            <br/>
+            <p class="title">Password</p>
+            <input id="password" name="password" type="password" required 
+            pattern="^(?![A-Z]+$)(?![a-z]+$)(?!\d+$)(?![\W_]+$)\S{6,21}$" 
+            oninvalid="setCustomValidity('6-15位数字、字母和下划线')"/><br/>
+            <p class="des">
+                密码长度在6-21之间,必须含有字母，数字或符号
+            </p>
+            <br/>
+            <p class="title">Email Address</p>
+            <input id="emailAddress" name="email" type="email" 
+            oninvalid="setCustomValidity('请输入正确的email地址')"/><br/>
+            <p class="des">
+                可选
+            </p>
         </div>
         <br/>
         <br /><br /><br /><br />
