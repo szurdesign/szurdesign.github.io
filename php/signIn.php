@@ -15,6 +15,13 @@ if(isset($_POST["submit"]) && $_POST["submit"]=="Sign in") {
     $result=mysql_query($sql) or die(mysql_error());
     $num=mysql_num_rows($result);
     if($num && $num==1) {
+        // session starts
+        session_start();
+        if(isset($_SESSION)) {
+            echo $_SESSION;
+        }else {
+            echo "no session started";
+        }
         echo "<script>alert('登录成功！');location.href='http://www.szurdesign.com';</script>";
         exit();
     }else {
