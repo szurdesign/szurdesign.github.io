@@ -20,8 +20,17 @@
             ctx.moveTo(0,36); ctx.lineTo(48,36); ctx.stroke();
         </script>
         <span>
-            <a href="signIn.html">登录</a>
-            <a href="signUp.html">注册</a>
+            <?php
+            session_start();
+            if(isset($_SESSION['username'])) {
+                // 已登录
+                $username=$_SESSION['username'];
+                echo "Hello, "."$username"." !";
+            }else {
+                // 未登录
+                echo '<a href="views/signIn.html">登录</a> <a href="views/signUp.html">注册</a>';
+            }
+            ?>
         </span>
         <div class="clear"></div>
     </nav>
