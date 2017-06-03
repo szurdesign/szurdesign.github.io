@@ -26,7 +26,7 @@ nav canvas {
 div.sCanvas ul {
     position:absolute;
     background-color:rgba(251,251,251,0.8);
-    margin-left:8%; margin-top:60px;
+    padding-left:8%; margin-top:60px;
     padding:0;
     display:none;
     opacity:0.5; transition:opacity 0.7s;
@@ -35,6 +35,7 @@ div.sCanvas ul {
 div.sCanvas ul:hover {opacity:1;}
 div.sCanvas ul li {
     list-style:none;
+    margin-left:8%;
     width:48px;
     clear:both;
     text-align:center;

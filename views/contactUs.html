@@ -7,20 +7,22 @@
 	<!-- Site CSS -->
 	<link rel="stylesheet" type="text/css" href="../css/cIndex.css">
 	<link rel="stylesheet" type="text/css" href="../css/cContactUs.css">
+	<!-- Site js -->
+	<script src="../js/jslib.js"></script>
+	<script src="../js/jsurdesign.js"></script>
 </head>
 <body>
     <nav>
-        <a href="#">
-        <canvas id="myCanvas" width="48px" height="48px">
-        </canvas></a>
-        <script tyep="text/javascript">
-            var c=document.getElementById("myCanvas");
-            var ctx=c.getContext("2d");
-            ctx.moveTo(0,12); ctx.lineTo(48,12); ctx.stroke();
-            ctx.moveTo(0,24); ctx.lineTo(48,24); ctx.stroke();
-            ctx.moveTo(0,36); ctx.lineTo(48,36); ctx.stroke();
-        </script>
-        <span>
+        <div class="sCanvas" id="sCanvas">
+            <canvas id="myCanvas" width="48px" height="48px" 
+                onmouseover="displayUl();">
+            </canvas>
+            <ul id="downUl" onmouseout="hideUl()">
+                <li onclick="signOut();">退出</li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <span class="sRight">
             <?php
             session_start();
             if(isset($_SESSION['username'])) {
