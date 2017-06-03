@@ -165,4 +165,11 @@ function signOut() {
     createXMLHttpRequest();
     xmlhttp.open("POST", "../php/signOut.php", true);
     xmlhttp.send();
+
+    // response from sever
+    xmlhttp.onreadystatechange=function() {
+        if(xmlhttp.readyState==4 && xmlhttp.status==200) {
+            alert(xmlhttp.responseText);
+        }
+    }
 }
