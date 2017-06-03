@@ -163,8 +163,6 @@ function createXMLHttpRequest() {
 }
 function signOut() {
     createXMLHttpRequest();
-    xmlhttp.open("POST", "../php/signOut.php", true);
-    xmlhttp.send();
 
     // response from sever
     xmlhttp.onreadystatechange=function() {
@@ -172,4 +170,8 @@ function signOut() {
             alert(xmlhttp.responseText);
         }
     }
+
+    // send message
+    xmlhttp.open("POST", "../php/signOut.php", true);
+    xmlhttp.send();
 }
