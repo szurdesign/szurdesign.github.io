@@ -91,11 +91,14 @@ function setCurrentPic() {
  */
 window.onload = function() {
     alert("该网站开发未完成，功能仅供体验");
+    drawCanvas();
     showPic(1);
 }
 
+/*
+ * 窗口大小改变时刷新图片
+ */
 window.onresize = function() {
-    //窗口大小改变时刷新图片
     showPic(sign);
 }
 
@@ -132,8 +135,43 @@ function prePic() {
 }
 
 /*
- * 弹出窗控制
+ * canvas
  */
-function close() {
-    document.getElementById("cancel");
+function drawCanvas() {
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    ctx.moveTo(0,12); ctx.lineTo(48,12); ctx.stroke();
+    ctx.moveTo(0,24); ctx.lineTo(48,24); ctx.stroke();
+    ctx.moveTo(0,36); ctx.lineTo(48,36); ctx.stroke();
+}
+
+/*
+ * navi bar display
+ */
+function displayUl() {
+    var ul=document.getElementById("downUl");
+    ul.style.display="block";
+}
+function hideUl() {
+    var ul=document.getElementById("downUl");
+    ul.style.display="none";
+}
+
+/*
+ * ajax
+ */
+var xmlhttp;
+function createXMLHttpRequest() {
+    if(window.XMLHttpRequest) {
+        // code for IE7+,firefox,chrome...
+        xmlhttp=new XMLHttpRequest();
+    }else {
+        // code for IE5,IE6
+        xmlhttp=new ActionXObject("Microsoft.XMLHTTP");
+    }
+}
+function signOut() {
+    createXMLHttpRequest();
+    xmlhttp.open("POST", "../php/signOut.php", true);
+    xmlhttp.send();
 }
