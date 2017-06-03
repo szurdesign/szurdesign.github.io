@@ -138,7 +138,12 @@ p.mid-text {
 	overflow:hidden;
     transition:width 0.3s;
 }
-#mid-pics-div:hover {overflow:visible;}
+/*
+#mid-pics-div:hover {
+    overflow:visible;
+    transition:width 0.3s;
+}
+*/
 .mid-pics {
 	width:98%;
 	height:auto;
