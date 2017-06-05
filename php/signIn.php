@@ -20,7 +20,7 @@ if(isset($_POST["submit"]) && $_POST["submit"]=="Sign in") {
         $result=mysql_query("select username from userInfo where phoneNumber='$phoneNumber'");
         $row=mysql_fetch_row($result);
         $_SESSION['username']=$row[0];
-        echo "<script>alert('登录成功！');location.href='http://www.szurdesign.com';</script>";
+        echo "<script>alert('登录成功！');location.href='../index.html';</script>";
         exit();
     }else {
         echo "<script>alert('登录失败！')</script>";
