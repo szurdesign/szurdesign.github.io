@@ -7,8 +7,9 @@ if(isset($_POST["submit"]) && $_POST["submit"]=="Sign up") {
     $phoneNumber=$_POST["phoneNumber"];
 
     // database
-    $con=mysql_connect("localhost","bran","liaomelo15@");
-    mysql_select_db("szurdesign");
+    require("/var/www/html/db_config.php");
+    $con=mysql_connect($mysql_server_name,$mysql_username,$mysql_password);
+    mysql_select_db($mysql_database);
     if(mysqli_connect_errno($con)) {
         // check connection
         echo "<script>alert('Fail to connect to MySQL Database')</script>";
